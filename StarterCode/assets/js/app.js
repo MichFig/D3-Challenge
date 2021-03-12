@@ -96,7 +96,7 @@ function renderCircles(circlesGroup, newXScale, chosenXAxis) {
 // Retrieve data from the CSV file and execute everything below
 d3.csv("assets/data/data.csv").then(function (healthData, err) {
 
-// Check Data
+  // Check Data
   console.log(healthData);
 
   if (err) throw err;
@@ -143,12 +143,12 @@ d3.csv("assets/data/data.csv").then(function (healthData, err) {
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
     .attr("cy", d => yLinearScale(d.obesity))
     .attr("r", 20)
-    .attr("fill", "pink")
+    .attr("fill", "blue")
     .attr("opacity", ".5");
 
-  // Create group for two x-axis labels
+  // Create group for three x-axis labels
   var labelsGroup = chartGroup.append("g")
-    .attr("transform", `translate(${width / 2}, ${height + 20})`);
+    .attr("transform", `translate(${width / 3}, ${height + 20})`);
 
   var povertyLabel = labelsGroup.append("text")
     .attr("x", 0)
@@ -162,7 +162,14 @@ d3.csv("assets/data/data.csv").then(function (healthData, err) {
     .attr("y", 40)
     .attr("value", "obesity") // value to grab for event listener
     .classed("inactive", true)
-    .text("# of Albums Released");
+    .text("Obesity(%)");
+
+  var incomeLabelLabel = labelsGroup.append("text")
+    .attr("x", 0)
+    .attr("y", 60)
+    .attr("value", "income") // value to grab for event listener
+    .classed("inactive", true)
+    .text("Income");
 
   // append y axis
   chartGroup.append("text")
