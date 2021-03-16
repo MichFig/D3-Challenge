@@ -3,6 +3,11 @@
   border: 1px solid #e3e3e3;
 }
 
+img.animated-gif{
+  width: 120px;
+  height: auto;
+}
+
 /* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
 html {
   position: relative;
@@ -29,3 +34,4 @@ body {
   margin: 0;
   font-size: 16px;
 }
+
