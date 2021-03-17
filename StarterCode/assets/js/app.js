@@ -344,20 +344,20 @@ d3.csv('./assets/data/data.csv').then(function (censusData) {
         circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
 
         //Change of the classes changes text
-        if (chosenYAxis === 'age') {
-          ageLabel.classed('active', true).classed('inactive', false);
-          incomeLabel.classed('active', false).classed('inactive', true);
-          povertyLabel.classed('active', false).classed('inactive', true);
+        if (chosenYAxis === 'smokes') {
+          smokesLabel.classed('active', true).classed('inactive', false);
+          obesityLabel.classed('active', false).classed('inactive', true);
+          healthcareLabel.classed('active', false).classed('inactive', true);
         }
-        else if (chosenYAxis === 'income') {
-          ageLabel.classed('active', false).classed('inactive', true);
-          incomeLabel.classed('active', true).classed('inactive', false);
-          povertyLabel.classed('active', false).classed('inactive', true);
+        else if (chosenYAxis === 'obesity') {
+          smokesLabel.classed('active', false).classed('inactive', true);
+          obesityLabel.classed('active', true).classed('inactive', false);
+          healthcareLabel.classed('active', false).classed('inactive', true);
         }
         else {
-          ageLabel.classed('active', false).classed('inactive', true);
-          incomeLabel.classed('active', false).classed('inactive', true);
-          povertyLabel.classed('active', true).classed('inactive', false);
+          smokesLabel.classed('active', false).classed('inactive', true);
+          obesityLabel.classed('active', false).classed('inactive', true);
+          healthcareLabel.classed('active', true).classed('inactive', false);
         }
       }
     });
