@@ -112,29 +112,29 @@ function styleX(value, chosenXAxis) {
 //funtion for updating circles group
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
-  // smokes
+  // Smokes
   if (chosenXAxis === 'smokes') {
     var xLabel = 'Smokes';
   }
-  //income
+  //Income
   else if (chosenXAxis === '') {
     var xLabel = 'Median Income:';
   }
-  //age
+  //Obesity
   else {
-    var xLabel = 'Healthcare';
+    var xLabel = 'Obesity';
   }
   //Y label
   //healthcare
-  if (chosenYAxis === 'healthcare') {
+  if (chosenYAxis === 'poverty') {
     var yLabel = "Healthcare:"
   }
-  else if (chosenYAxis === 'obesity') {
-    var yLabel = 'Obesity:';
+  else if (chosenYAxis === 'age') {
+    var yLabel = 'Age:';
   }
   //smoking
   else {
-    var yLabel = 'Poverty:';
+    var yLabel = 'Income:';
   }
 
   //create tooltip
