@@ -6,7 +6,7 @@ Here we see factors such as Age(Median), Income, Poverty and Obesity broken down
 
 The data set is based on 2014 ACS 1-year estimates from the [US Census Bureau](https://data.census.gov/cedsci/).
 
-
+Below is a visualization which shows the Poverty rate and percentage of Smokers per state.
 ![poverty](Images/Age.jpg)
 
 
